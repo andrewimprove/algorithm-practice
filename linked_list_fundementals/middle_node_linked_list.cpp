@@ -30,11 +30,9 @@ int main(){
 	head->next->next = new ListNode{3, nullptr};
 	head->next->next->next = new ListNode{4,nullptr};
 	head->next->next->next->next = new ListNode{5,nullptr};
-	head->next->next->next->next->next = new ListNode{6,nullptr};
+	head->next->next->next->next->next = new ListNode{6,nullptr}; 
 
-	ListNode* temp = head; 
-
-	cout << middleNode(temp) << " ";
+	cout << middleNode(head) << " ";
 	
 
 }
