@@ -5,7 +5,7 @@
 using namespace std;
 
 //put string a and then string b into frequency maps
-//check 
+//check
 
 
 bool ransom_note(string supply, string demand){
@@ -20,8 +20,7 @@ bool ransom_note(string supply, string demand){
 	for (int i = 0; i < demand.length(); i++){
 			if (m[demand[i]] == 0) return false;
 			m[demand[i]]--;
-		
-	} 
+	}
 	return true;
 }
 
