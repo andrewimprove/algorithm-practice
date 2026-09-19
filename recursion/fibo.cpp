@@ -18,6 +18,9 @@ int fibon(int n){
 int main(){
 
 
-  cout << fibon(5) << " ";
+  cout << fibon(35) << " ";
+  cout << fibon(40) << " ";
+  cout << fibon(45) << " ";
+
 
 }
