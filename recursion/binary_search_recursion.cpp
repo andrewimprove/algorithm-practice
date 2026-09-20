@@ -3,15 +3,15 @@
 
 
 using namespace std;
-int binarySearch(vector <int> arr,int low,int high, int target){
+int binarySearch(vector <int> &arr,int low,int high, int target){
 
   //Step 1:  if target does not exist return - 1
   if (low > high){
     return -1;
   }
 
-   int mid = low + (high - low) / 2;
 
+   int mid = low + (high - low) / 2;
 
   if (arr[mid] == target){
     return mid;  
