@@ -1,11 +1,7 @@
 #include <iostream>
-#include <queue>
-
-
 
 using namespace std;
 
-//Binary Tree
 struct TreeNode {
   int data;
   TreeNode* left;
@@ -13,10 +9,13 @@ struct TreeNode {
 };
 
 
-bool isMirror(TreeNode* root, TreeNode* root_two){
+
+bool Is_mirror(TreeNode* root, TreeNode* root_two){
+
   if (root == nullptr && root_two == nullptr){
-    return true;
+        return true;
   }
+
   if (root == nullptr || root_two == nullptr){
     return false;
   }
@@ -24,21 +23,22 @@ bool isMirror(TreeNode* root, TreeNode* root_two){
   if (root->data != root_two->data){
     return false;
   }
-  return isMirror(root->left,root_two->right) && isMirror(root->right,root_two->left);
+
+  return Is_mirror(root->left,root_two->right) && Is_mirror(root->right, root_two->left);
 }
 
-
-
-
-bool sym_tree(TreeNode* root){ 
+bool symm_tree(TreeNode* root){
 
   if (root == nullptr){
-      return true;
+      return true;  
   }
  
-  return isMirror(root->left, root->right);
+  return Is_mirror(root->left,root->right);
+
 };
+
 int main(){
+
 
   TreeNode* t1 = new TreeNode{4, nullptr,nullptr};
   t1->left = new TreeNode{2,nullptr,nullptr};
@@ -48,10 +48,9 @@ int main(){
   t1->left->right = new TreeNode{4,nullptr,nullptr};
 
   t1->right->left = new TreeNode{4,nullptr,nullptr};
-  t1->right->right = new TreeNode{3,nullptr,nullptr};
+  t1->right->right = new TreeNode{5,nullptr,nullptr};
 
 
-  cout << sym_tree(t1) << " ";
-
+  cout << symm_tree(t1) << " ";
 
 }
